@@ -1,27 +1,46 @@
 #!/bin/bash
-# SSH File Transfer Helper Script
+# Git File Transfer Helper Script
 # Futtasd ezt a scriptet, és másold be a kapott parancsot a LOKÁLIS gépeden
 
-# Változók
-REMOTE_HOST="runsc"
-REMOTE_USER="root"
-REMOTE_PATH="/home/user/Website"
-LOCAL_PATH="~/Downloads/Website"
+# Aktuális branch lekérése
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "claude/setup-ssh-file-transfer-Oi9Vt")
+
+# Változott fájlok listázása (utolsó commitból)
+FILES=$(git diff-tree --no-commit-id --name-only -r HEAD 2>/dev/null)
 
 echo "=============================================="
-echo "  SSH Fájl Letöltési Parancsok"
+echo "  Git Fájl Letöltési Parancsok"
 echo "=============================================="
 echo ""
-echo "A teljes projekt letöltése:"
-echo "-------------------------------------------"
-echo "scp -r ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/* ${LOCAL_PATH}/"
+echo "Branch: $BRANCH"
 echo ""
-echo "Vagy rsync-kel (ajánlott nagyobb projektekhez):"
 echo "-------------------------------------------"
-echo "rsync -avz ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/ ${LOCAL_PATH}/"
+echo "TELJES BRANCH letöltése (checkout):"
+echo "-------------------------------------------"
 echo ""
-echo "=============================================="
-echo "Egyedi fájl letöltése (cseréld ki a FAJLNEV-et):"
+echo "git fetch origin $BRANCH && git checkout FETCH_HEAD"
+echo ""
 echo "-------------------------------------------"
-echo "scp ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/FAJLNEV ${LOCAL_PATH}/"
+echo "ÖSSZES FÁJL letöltése a branch-ből:"
+echo "-------------------------------------------"
+echo ""
+echo "git fetch origin $BRANCH && git checkout FETCH_HEAD -- ."
+echo ""
+
+if [ -n "$FILES" ]; then
+    echo "-------------------------------------------"
+    echo "EGYEDI FÁJLOK letöltése (utolsó commit):"
+    echo "-------------------------------------------"
+    echo ""
+    for FILE in $FILES; do
+        echo "git fetch origin $BRANCH && git checkout FETCH_HEAD -- $FILE"
+    done
+    echo ""
+fi
+
+echo "-------------------------------------------"
+echo "EGYEDI FÁJL letöltése (cseréld ki a FAJLNEV-et):"
+echo "-------------------------------------------"
+echo ""
+echo "git fetch origin $BRANCH && git checkout FETCH_HEAD -- FAJLNEV"
 echo ""
