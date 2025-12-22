@@ -44,7 +44,7 @@ export default function Navbar() {
             <img
               src="/logo-white.png"
               alt="Borota.dev"
-              className="h-12 w-auto"
+              className="h-32 w-auto"
             />
           </motion.a>
 
