@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -42,11 +41,9 @@ export default function Navbar() {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
           >
-            <Image
+            <img
               src="/logo.webp"
               alt="Borota.dev"
-              width={160}
-              height={40}
               className="h-8 w-auto"
             />
           </motion.a>

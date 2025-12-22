@@ -1,6 +1,5 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,11 +21,9 @@ export default function Impressum() {
       <header className="py-6 border-b border-border">
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image
+            <img
               src="/logo.webp"
               alt="Borota.dev"
-              width={140}
-              height={35}
               className="h-7 w-auto"
             />
           </Link>
