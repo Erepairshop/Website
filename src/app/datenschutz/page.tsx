@@ -1,5 +1,6 @@
-import { Code2, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Datenschutz | Borota.dev",
@@ -11,11 +12,14 @@ export default function Datenschutz() {
       {/* Header */}
       <header className="py-6 border-b border-border">
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-            <Code2 className="w-6 h-6 text-accent" />
-            <span>
-              Borota<span className="text-accent">.dev</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.webp"
+              alt="Borota.dev"
+              width={140}
+              height={35}
+              className="h-7 w-auto"
+            />
           </Link>
           <Link
             href="/"
@@ -120,7 +124,7 @@ export default function Datenschutz() {
               Bei Fragen zum Datenschutz können Sie sich jederzeit an uns
               wenden:
               <br />
-              E-Mail: kontakt@borota.dev
+              E-Mail: info@borota.dev
             </p>
           </section>
         </div>

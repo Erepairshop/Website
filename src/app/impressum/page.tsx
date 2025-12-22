@@ -1,5 +1,6 @@
-import { Code2, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Impressum | Borota.dev",
@@ -11,11 +12,14 @@ export default function Impressum() {
       {/* Header */}
       <header className="py-6 border-b border-border">
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-            <Code2 className="w-6 h-6 text-accent" />
-            <span>
-              Borota<span className="text-accent">.dev</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.webp"
+              alt="Borota.dev"
+              width={140}
+              height={35}
+              className="h-7 w-auto"
+            />
           </Link>
           <Link
             href="/"
@@ -37,11 +41,11 @@ export default function Impressum() {
               Angaben gemäß § 5 TMG
             </h2>
             <p>
-              Borota.dev
+              Erik Borota
               <br />
-              [Straße und Hausnummer]
+              Siedlungsring 51
               <br />
-              [PLZ Ort]
+              89415 Lauingen
               <br />
               Deutschland
             </p>
@@ -52,7 +56,20 @@ export default function Impressum() {
               Kontakt
             </h2>
             <p>
-              E-Mail: kontakt@borota.dev
+              Telefon: +49 176 98479520
+              <br />
+              E-Mail: info@borota.dev
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-4">
+              Umsatzsteuer-ID
+            </h2>
+            <p>
+              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+              <br />
+              DE308874569
             </p>
           </section>
 
@@ -61,9 +78,11 @@ export default function Impressum() {
               Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
             </h2>
             <p>
-              [Name]
+              Erik Borota
               <br />
-              [Adresse]
+              Siedlungsring 51
+              <br />
+              89415 Lauingen
             </p>
           </section>
 

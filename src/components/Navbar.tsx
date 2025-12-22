@@ -44,7 +44,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.02 }}
           >
             <Image
-              src="/logo.svg"
+              src="/logo.webp"
               alt="Borota.dev"
               width={160}
               height={40}
