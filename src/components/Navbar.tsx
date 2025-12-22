@@ -41,11 +41,9 @@ export default function Navbar() {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
           >
-            <img
-              src="/logo-white.png"
-              alt="Borota.dev"
-              className="h-32 w-auto"
-            />
+            <span className="text-2xl font-bold">
+              borota<span className="text-accent">.dev</span>
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}

@@ -26,11 +26,9 @@ export default function Footer() {
             className="flex items-center"
             whileHover={{ scale: 1.02 }}
           >
-            <img
-              src="/logo-white.png"
-              alt="Borota.dev"
-              className="h-24 w-auto"
-            />
+            <span className="text-xl font-bold">
+              borota<span className="text-accent">.dev</span>
+            </span>
           </motion.a>
 
           {/* Navigation */}
