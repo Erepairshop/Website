@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Sparkles, Send } from "lucide-react";
 
@@ -7,9 +8,8 @@ const packages = [
   {
     name: "Starter",
     subtitle: "Für kleine Projekte",
-    price: "ab 499",
-    unit: "€",
-    description: "Einmalig",
+    priceOnce: "499",
+    priceMonthly: "49",
     features: [
       "One-Page Website",
       "Responsive Design",
@@ -17,14 +17,19 @@ const packages = [
       "SEO Grundoptimierung",
       "1 Korrekturschleife",
     ],
+    monthlyExtras: [
+      "Hosting inklusive",
+      "SSL Zertifikat",
+      "Monatliche Backups",
+      "E-Mail Support",
+    ],
     popular: false,
   },
   {
     name: "Business",
     subtitle: "Am beliebtesten",
-    price: "ab 999",
-    unit: "€",
-    description: "Einmalig",
+    priceOnce: "999",
+    priceMonthly: "99",
     features: [
       "Bis zu 5 Seiten",
       "Responsive Design",
@@ -34,14 +39,21 @@ const packages = [
       "3 Korrekturschleifen",
       "Google Analytics",
     ],
+    monthlyExtras: [
+      "Hosting inklusive",
+      "Domain inklusive",
+      "SSL Zertifikat",
+      "Wöchentliche Backups",
+      "Priority Support",
+      "Monatliche Updates",
+    ],
     popular: true,
   },
   {
     name: "Premium",
     subtitle: "Für Unternehmen",
-    price: "ab 1999",
-    unit: "€",
-    description: "Einmalig",
+    priceOnce: "1999",
+    priceMonthly: "199",
     features: [
       "Unbegrenzte Seiten",
       "Custom Design",
@@ -51,6 +63,15 @@ const packages = [
       "Unbegrenzte Korrekturen",
       "Priority Support",
       "Wartung (3 Monate)",
+    ],
+    monthlyExtras: [
+      "Premium Hosting",
+      "Domain inklusive",
+      "SSL Zertifikat",
+      "Tägliche Backups",
+      "24/7 Support",
+      "Unbegrenzte Updates",
+      "Performance Monitoring",
     ],
     popular: false,
   },
@@ -64,6 +85,8 @@ const additionalServices = [
 ];
 
 export default function Preise() {
+  const [isMonthly, setIsMonthly] = useState(false);
+
   return (
     <section id="preise" className="py-24 relative">
       {/* Background */}
@@ -78,14 +101,41 @@ export default function Preise() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Transparente <span className="text-accent">Preise</span>
           </h2>
-          <p className="text-muted max-w-2xl mx-auto">
-            Faire Preise für professionelle Webentwicklung. Jedes Projekt ist individuell – kontaktieren Sie mich für ein genaues Angebot.
+          <p className="text-muted max-w-2xl mx-auto mb-8">
+            Faire Preise für professionelle Webentwicklung. Wählen Sie zwischen einmaliger Zahlung oder flexiblen Monatspaketen.
           </p>
+
+          {/* Toggle */}
+          <div className="inline-flex items-center gap-4 p-1.5 glass rounded-full">
+            <button
+              onClick={() => setIsMonthly(false)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                !isMonthly
+                  ? "bg-accent text-background"
+                  : "text-muted hover:text-foreground"
+              }`}
+            >
+              Einmalig
+            </button>
+            <button
+              onClick={() => setIsMonthly(true)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                isMonthly
+                  ? "bg-accent text-background"
+                  : "text-muted hover:text-foreground"
+              }`}
+            >
+              Monatlich
+              <span className="text-xs px-2 py-0.5 bg-accent-secondary/20 text-accent-secondary rounded-full">
+                All-in-One
+              </span>
+            </button>
+          </div>
         </motion.div>
 
         {/* Pricing Cards */}
@@ -116,20 +166,46 @@ export default function Preise() {
               </div>
 
               <div className="text-center mb-6">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-4xl font-bold">{pkg.price}</span>
-                  <span className="text-xl text-muted">{pkg.unit}</span>
-                </div>
-                <p className="text-sm text-muted">{pkg.description}</p>
+                <motion.div
+                  key={isMonthly ? "monthly" : "once"}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex items-baseline justify-center gap-1"
+                >
+                  <span className="text-sm text-muted">ab</span>
+                  <span className="text-4xl font-bold">
+                    {isMonthly ? pkg.priceMonthly : pkg.priceOnce}
+                  </span>
+                  <span className="text-xl text-muted">€</span>
+                </motion.div>
+                <p className="text-sm text-muted">
+                  {isMonthly ? "pro Monat (12 Monate)" : "Einmalig"}
+                </p>
               </div>
 
               <ul className="space-y-3 mb-6">
                 {pkg.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-sm">
-                    <Check className={`w-4 h-4 flex-shrink-0 ${pkg.popular ? "text-accent" : "text-accent"}`} />
+                    <Check className="w-4 h-4 flex-shrink-0 text-accent" />
                     <span>{feature}</span>
                   </li>
                 ))}
+
+                {/* Monthly extras */}
+                {isMonthly && (
+                  <>
+                    <li className="border-t border-border pt-3 mt-3">
+                      <span className="text-xs text-accent font-medium">+ Inklusive:</span>
+                    </li>
+                    {pkg.monthlyExtras.map((extra) => (
+                      <li key={extra} className="flex items-center gap-3 text-sm">
+                        <Check className="w-4 h-4 flex-shrink-0 text-accent-secondary" />
+                        <span className="text-muted">{extra}</span>
+                      </li>
+                    ))}
+                  </>
+                )}
               </ul>
 
               <a
@@ -147,30 +223,50 @@ export default function Preise() {
           ))}
         </div>
 
-        {/* Additional Services */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center"
-        >
-          <h3 className="text-xl font-semibold mb-6">Weitere Leistungen</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {additionalServices.map((service) => (
-              <div
-                key={service.name}
-                className="px-4 py-2 glass rounded-lg text-sm"
-              >
-                <span className="text-muted">{service.name}:</span>{" "}
-                <span className="text-accent font-medium">{service.price}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-muted mt-6">
-            Alle Preise verstehen sich zzgl. MwSt. • Individuelle Angebote auf Anfrage
-          </p>
-        </motion.div>
+        {/* Additional Services - only show for one-time */}
+        {!isMonthly && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-center"
+          >
+            <h3 className="text-xl font-semibold mb-6">Weitere Leistungen</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {additionalServices.map((service) => (
+                <div
+                  key={service.name}
+                  className="px-4 py-2 glass rounded-lg text-sm"
+                >
+                  <span className="text-muted">{service.name}:</span>{" "}
+                  <span className="text-accent font-medium">{service.price}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Monthly info */}
+        {isMonthly && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center glass rounded-xl p-6"
+          >
+            <h3 className="text-lg font-semibold mb-2">Warum monatlich?</h3>
+            <p className="text-muted text-sm max-w-2xl mx-auto">
+              Unsere Monatspakete beinhalten alles, was Sie brauchen: Website-Erstellung, Hosting, Domain, SSL,
+              regelmäßige Updates und Support. Keine versteckten Kosten, keine Überraschungen.
+              Mindestlaufzeit 12 Monate.
+            </p>
+          </motion.div>
+        )}
+
+        <p className="text-xs text-muted mt-6 text-center">
+          Alle Preise verstehen sich zzgl. MwSt. • Individuelle Angebote auf Anfrage
+        </p>
       </div>
     </section>
   );

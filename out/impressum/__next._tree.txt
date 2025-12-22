@@ -1,3 +1,3 @@
-:HL["/_next/static/chunks/9832370c6e48e761.css","style"]
+:HL["/_next/static/chunks/b9b5ceccfc11a22c.css","style"]
 :HL["/logo.png","image"]
-0:{"buildId":"fxL36C0E19GjVhr9nuKJA","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"impressum","paramType":null,"paramKey":"impressum","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"TY7_5l42qRd5M879wfgwP","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"impressum","paramType":null,"paramKey":"impressum","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
