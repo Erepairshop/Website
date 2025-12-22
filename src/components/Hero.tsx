@@ -1,9 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowDown, Code2, Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springX = useSpring(mouseX, { stiffness: 50, damping: 20 });
+  const springY = useSpring(mouseY, { stiffness: 50, damping: 20 });
+
+  const rotateX = useTransform(springY, [-300, 300], [5, -5]);
+  const rotateY = useTransform(springX, [-300, 300], [-5, 5]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      mouseX.set(clientX - innerWidth / 2);
+      mouseY.set(clientY - innerHeight / 2);
+      setMousePosition({ x: clientX, y: clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
+
   return (
     <section
       id="home"
@@ -11,8 +35,22 @@ export default function Hero() {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-secondary/5 rounded-full blur-3xl" />
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+          animate={{
+            x: mousePosition.x * 0.02,
+            y: mousePosition.y * 0.02,
+          }}
+          transition={{ type: "spring", stiffness: 50, damping: 30 }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-secondary/10 rounded-full blur-3xl"
+          animate={{
+            x: -mousePosition.x * 0.02,
+            y: -mousePosition.y * 0.02,
+          }}
+          transition={{ type: "spring", stiffness: 50, damping: 30 }}
+        />
       </div>
 
       {/* Grid Pattern */}
@@ -33,7 +71,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="flex items-center justify-center gap-2 mb-6"
         >
-          <span className="px-4 py-2 rounded-full glass text-sm text-muted flex items-center gap-2">
+          <span className="px-4 py-2 rounded-full glass text-sm text-muted flex items-center gap-2 glow-hover">
             <Sparkles className="w-4 h-4 text-accent" />
             Verfügbar für neue Projekte
           </span>
@@ -47,7 +85,7 @@ export default function Hero() {
         >
           Webseiten & Apps
           <br />
-          <span className="text-accent">die funktionieren</span>
+          <span className="text-accent glow-text">die funktionieren</span>
         </motion.h1>
 
         <motion.p
@@ -68,28 +106,33 @@ export default function Hero() {
         >
           <a
             href="#kontakt"
-            className="group px-8 py-4 bg-accent text-background font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 flex items-center gap-2"
+            className="group px-8 py-4 bg-accent text-background font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 flex items-center gap-2 btn-glow glow-hover"
           >
             <Code2 className="w-5 h-5" />
             Projekt anfragen
           </a>
           <a
             href="#leistungen"
-            className="px-8 py-4 glass rounded-lg hover:bg-card-hover transition-all duration-300 flex items-center gap-2"
+            className="px-8 py-4 glass rounded-lg hover:bg-card-hover transition-all duration-300 flex items-center gap-2 card-glow"
           >
             Mehr erfahren
             <ArrowDown className="w-4 h-4" />
           </a>
         </motion.div>
 
-        {/* Terminal-like decoration */}
+        {/* Terminal-like decoration with 3D effect */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-16 max-w-2xl mx-auto"
+          style={{
+            rotateX,
+            rotateY,
+            transformStyle: "preserve-3d",
+          }}
+          className="mt-16 max-w-2xl mx-auto perspective-1000"
         >
-          <div className="glass rounded-lg p-4 text-left font-mono text-sm">
+          <div className="glass rounded-lg p-4 text-left font-mono text-sm card-glow">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
