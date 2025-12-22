@@ -7,10 +7,9 @@ import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Über mich", href: "#ueber-mich" },
   { name: "Leistungen", href: "#leistungen" },
   { name: "Projekte", href: "#projekte" },
-  { name: "Ablauf", href: "#ablauf" },
+  { name: "Preise", href: "#preise" },
   { name: "Kontakt", href: "#kontakt" },
 ];
 
