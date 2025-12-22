@@ -1,9 +1,18 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Datenschutz | Borota.dev",
+export const metadata: Metadata = {
+  title: "Datenschutz",
+  description: "Datenschutzerklärung von Borota.dev - Informationen zum Umgang mit Ihren personenbezogenen Daten.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/datenschutz",
+  },
 };
 
 export default function Datenschutz() {

@@ -1,9 +1,18 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Impressum | Borota.dev",
+export const metadata: Metadata = {
+  title: "Impressum",
+  description: "Impressum und rechtliche Informationen von Borota.dev - Webentwicklung von Erik Borota in Lauingen, Deutschland.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/impressum",
+  },
 };
 
 export default function Impressum() {

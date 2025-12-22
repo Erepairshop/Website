@@ -1,0 +1,99 @@
+# Borota.dev - Professionelle Webentwicklung
+
+> Moderne Webseiten, Web Apps und Mobile Apps mit Next.js, React & TypeScript
+
+## Über Borota.dev
+
+Borota.dev ist ein professioneller Webentwicklungs-Service mit Sitz in Lauingen, Deutschland. Wir entwickeln moderne, responsive Webseiten und Anwendungen für Unternehmen und Einzelpersonen.
+
+## Kontakt
+
+- **Inhaber:** Erik Borota
+- **E-Mail:** info@borota.dev
+- **Telefon:** +49 176 98479520
+- **WhatsApp:** +49 176 98479520
+- **Adresse:** Siedlungsring 51, 89415 Lauingen, Deutschland
+- **USt.-ID:** DE308874569
+
+## Leistungen
+
+### Webentwicklung
+- Moderne, responsive Webseiten
+- One-Page und Multi-Page Websites
+- Content Management Systeme (CMS)
+- SEO Optimierung
+
+### Web Apps
+- Progressive Web Apps (PWA)
+- Single Page Applications (SPA)
+- Dashboard und Admin-Panels
+- E-Commerce Lösungen
+
+### Mobile Apps
+- Cross-Platform Apps
+- iOS und Android Entwicklung
+- Native Performance
+
+### Backend & API
+- RESTful APIs
+- Datenbank-Integration
+- Server-Side Rendering
+- Cloud Hosting
+
+## Technologien
+
+- **Frontend:** Next.js, React, TypeScript, Tailwind CSS
+- **Animation:** Framer Motion
+- **Backend:** Node.js, Python
+- **Datenbank:** PostgreSQL, MongoDB
+- **Hosting:** Vercel, AWS, Shared Hosting
+
+## Preise
+
+### Starter Paket (ab 499€)
+- One-Page Website
+- Responsive Design
+- Kontaktformular
+- SEO Grundoptimierung
+- 1 Korrekturschleife
+
+### Business Paket (ab 999€)
+- Bis zu 5 Seiten
+- Responsive Design
+- Kontaktformular
+- SEO Optimierung
+- CMS Integration
+- 3 Korrekturschleifen
+- Google Analytics
+
+### Premium Paket (ab 1999€)
+- Unbegrenzte Seiten
+- Custom Design
+- Web App / PWA
+- Backend Integration
+- API Entwicklung
+- Unbegrenzte Korrekturen
+- Priority Support
+- Wartung (3 Monate)
+
+## Zusätzliche Services
+
+- Wartung & Support: ab 49€/Monat
+- SEO Optimierung: ab 199€
+- Logo Design: ab 149€
+- Hosting Setup: ab 99€
+
+Alle Preise verstehen sich zzgl. MwSt.
+
+## Standort
+
+Lauingen (Donau), Bayern, Deutschland
+- Bedient ganz Deutschland und international
+
+## Verfügbarkeit
+
+Montag bis Freitag: 09:00 - 18:00 Uhr
+
+## Website
+
+https://borota.dev
