@@ -1,10 +1,10 @@
 # Borota.dev - Professionelle Webentwicklung
 
-> Moderne Webseiten, Web Apps und Mobile Apps mit Next.js, React & TypeScript
+> Moderne Webseiten, Web Apps und KI-Lösungen mit Next.js, React & TypeScript
 
 ## Über Borota.dev
 
-Borota.dev ist ein professioneller Webentwicklungs-Service mit Sitz in Lauingen, Deutschland. Wir entwickeln moderne, responsive Webseiten und Anwendungen für Unternehmen und Einzelpersonen.
+Borota.dev ist ein professioneller Webentwicklungs-Service mit Sitz in Lauingen, Deutschland. Wir entwickeln moderne, responsive Webseiten, Web-Anwendungen und KI-gestützte Lösungen für Unternehmen und Einzelpersonen.
 
 ## Kontakt
 
@@ -23,16 +23,17 @@ Borota.dev ist ein professioneller Webentwicklungs-Service mit Sitz in Lauingen,
 - Content Management Systeme (CMS)
 - SEO Optimierung
 
-### Web Apps
+### Web Apps / PWA
 - Progressive Web Apps (PWA)
 - Single Page Applications (SPA)
 - Dashboard und Admin-Panels
 - E-Commerce Lösungen
 
-### Mobile Apps
-- Cross-Platform Apps
-- iOS und Android Entwicklung
-- Native Performance
+### KI & Automatisierung
+- Chatbots und KI-Assistenten
+- Prozessautomatisierung
+- KI-Integration in bestehende Systeme
+- Intelligente Datenverarbeitung
 
 ### Backend & API
 - RESTful APIs
@@ -40,13 +41,36 @@ Borota.dev ist ein professioneller Webentwicklungs-Service mit Sitz in Lauingen,
 - Server-Side Rendering
 - Cloud Hosting
 
+### SEO & Performance
+- Core Web Vitals Optimierung
+- Keyword-Optimierung
+- Google Analytics Integration
+- Ladezeit-Optimierung
+
+### Wartung & Support
+- Regelmäßige Updates & Backups
+- Bug Fixes
+- Erweiterungen
+- Technischer Support
+
 ## Technologien
 
 - **Frontend:** Next.js, React, TypeScript, Tailwind CSS
 - **Animation:** Framer Motion
 - **Backend:** Node.js, Python
 - **Datenbank:** PostgreSQL, MongoDB
+- **KI:** OpenAI, Claude, LangChain
 - **Hosting:** Vercel, AWS, Shared Hosting
+
+## Referenzen
+
+### eRepairShop
+- Webseite für Elektronik-Reparaturservice
+- Technologien: Next.js, Tailwind CSS, React
+
+### PunktePass
+- Mobile App für Treue-Punkte System
+- Verfügbar im App Store für iOS
 
 ## Preise
 

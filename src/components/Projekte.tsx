@@ -5,16 +5,16 @@ import { ExternalLink, Github, Star } from "lucide-react";
 
 const projects = [
   {
-    title: "PunktePass",
-    description: "Mobile App für Treue-Punkte System. Verfügbar im App Store für iOS.",
-    tags: ["React Native", "iOS", "Mobile App"],
-    link: "#", // App Store link
+    title: "eRepairShop",
+    description: "Professionelle Webseite für einen Elektronik-Reparaturservice. Modernes Design mit Online-Terminbuchung und Preisübersicht.",
+    tags: ["Next.js", "React", "Tailwind CSS", "SEO"],
+    link: "https://erepairshop.de",
     featured: true,
   },
   {
-    title: "eRepairShop",
-    description: "Webseite und Online-Präsenz für einen Elektronik-Reparaturservice.",
-    tags: ["Next.js", "Tailwind CSS", "React"],
+    title: "PunktePass",
+    description: "Digitales Treue-Punkte System als iOS App. Kunden sammeln Punkte und lösen Prämien ein - papierlos und modern.",
+    tags: ["React Native", "iOS", "Mobile App", "UX Design"],
     link: "#",
     featured: true,
   },
