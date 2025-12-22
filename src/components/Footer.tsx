@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUp, Code2 } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -23,13 +24,16 @@ export default function Footer() {
           {/* Logo */}
           <motion.a
             href="#home"
-            className="flex items-center gap-2 text-xl font-bold"
+            className="flex items-center"
             whileHover={{ scale: 1.02 }}
           >
-            <Code2 className="w-6 h-6 text-accent" />
-            <span>
-              Borota<span className="text-accent">.dev</span>
-            </span>
+            <Image
+              src="/logo.svg"
+              alt="Borota.dev"
+              width={140}
+              height={35}
+              className="h-7 w-auto"
+            />
           </motion.a>
 
           {/* Navigation */}
