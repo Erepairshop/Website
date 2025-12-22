@@ -42,7 +42,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.02 }}
           >
             <img
-              src="/logo.png"
+              src="/logo-white.png"
               alt="Borota.dev"
               className="h-8 w-auto"
             />
