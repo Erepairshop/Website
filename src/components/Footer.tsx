@@ -29,7 +29,7 @@ export default function Footer() {
             <img
               src="/logo-white.png"
               alt="Borota.dev"
-              className="h-7 w-auto"
+              className="h-10 w-auto"
             />
           </motion.a>
 
