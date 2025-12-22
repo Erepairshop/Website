@@ -22,7 +22,7 @@ export default function Impressum() {
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <img
-              src="/logo.webp"
+              src="/logo.png"
               alt="Borota.dev"
               className="h-7 w-auto"
             />

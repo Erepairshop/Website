@@ -27,7 +27,7 @@ export default function Footer() {
             whileHover={{ scale: 1.02 }}
           >
             <img
-              src="/logo.webp"
+              src="/logo.png"
               alt="Borota.dev"
               className="h-7 w-auto"
             />
