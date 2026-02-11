@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Was kostet eine Website?",
     answer:
-      "Die Preise starten ab 499€ für eine One-Page Website. Business-Pakete ab 999€ und Premium-Lösungen ab 1999€. Jedes Projekt ist individuell - kontaktieren Sie mich für ein genaues Angebot.",
+      "Die Preise starten ab 399€ für eine One-Page Website. Business-Pakete ab 899€ und Premium-Lösungen ab 1899€. Jedes Projekt ist individuell - kontaktieren Sie mich für ein genaues Angebot.",
   },
   {
     question: "Bieten Sie auch Wartung und Support an?",

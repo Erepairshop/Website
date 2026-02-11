@@ -226,9 +226,9 @@ const jsonLd = {
             },
             priceSpecification: {
               "@type": "PriceSpecification",
-              price: "499",
+              price: "399",
               priceCurrency: "EUR",
-              minPrice: "499",
+              minPrice: "399",
             },
           },
           {
@@ -240,9 +240,9 @@ const jsonLd = {
             },
             priceSpecification: {
               "@type": "PriceSpecification",
-              price: "999",
+              price: "899",
               priceCurrency: "EUR",
-              minPrice: "999",
+              minPrice: "899",
             },
           },
           {
@@ -254,9 +254,9 @@ const jsonLd = {
             },
             priceSpecification: {
               "@type": "PriceSpecification",
-              price: "1999",
+              price: "1899",
               priceCurrency: "EUR",
-              minPrice: "1999",
+              minPrice: "1899",
             },
           },
         ],
@@ -299,7 +299,7 @@ const jsonLd = {
           name: "Was kostet eine Website?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Die Preise starten ab 499€ für eine One-Page Website. Business-Pakete ab 999€ und Premium-Lösungen ab 1999€. Jedes Projekt ist individuell - kontaktieren Sie mich für ein genaues Angebot.",
+            text: "Die Preise starten ab 399€ für eine One-Page Website. Business-Pakete ab 899€ und Premium-Lösungen ab 1899€. Jedes Projekt ist individuell - kontaktieren Sie mich für ein genaues Angebot.",
           },
         },
         {

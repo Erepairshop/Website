@@ -8,7 +8,7 @@ const packages = [
   {
     name: "Starter",
     subtitle: "Für kleine Projekte",
-    priceOnce: "499",
+    priceOnce: "399",
     priceMonthly: "49",
     features: [
       "One-Page Website",
@@ -28,7 +28,7 @@ const packages = [
   {
     name: "Business",
     subtitle: "Am beliebtesten",
-    priceOnce: "999",
+    priceOnce: "899",
     priceMonthly: "99",
     features: [
       "Bis zu 5 Seiten",
@@ -52,7 +52,7 @@ const packages = [
   {
     name: "Premium",
     subtitle: "Für Unternehmen",
-    priceOnce: "1999",
+    priceOnce: "1899",
     priceMonthly: "199",
     features: [
       "Unbegrenzte Seiten",
