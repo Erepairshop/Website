@@ -2,7 +2,12 @@ import { Code2, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Datenschutz | Borota.dev",
+  title: "Datenschutzerklärung",
+  description: "Datenschutzerklärung von Borota.dev - Informationen zur Datenerfassung, Ihren Rechten und dem Schutz Ihrer personenbezogenen Daten.",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function Datenschutz() {
@@ -120,7 +125,7 @@ export default function Datenschutz() {
               Bei Fragen zum Datenschutz können Sie sich jederzeit an uns
               wenden:
               <br />
-              E-Mail: kontakt@borota.dev
+              E-Mail: info@borota.dev
             </p>
           </section>
         </div>

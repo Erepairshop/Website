@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Über mich", href: "#ueber-mich" },
   { name: "Leistungen", href: "#leistungen" },
   { name: "Projekte", href: "#projekte" },
+  { name: "Preise", href: "#preise" },
   { name: "Kontakt", href: "#kontakt" },
 ];
 
@@ -27,13 +26,9 @@ export default function Footer() {
             className="flex items-center"
             whileHover={{ scale: 1.02 }}
           >
-            <Image
-              src="/logo.svg"
-              alt="Borota.dev"
-              width={140}
-              height={35}
-              className="h-7 w-auto"
-            />
+            <span className="text-xl font-bold">
+              borota<span className="text-accent">.dev</span>
+            </span>
           </motion.a>
 
           {/* Navigation */}
