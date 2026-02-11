@@ -85,7 +85,7 @@ const additionalServices = [
 ];
 
 export default function Preise() {
-  const [isMonthly, setIsMonthly] = useState(false);
+  const [isMonthly, setIsMonthly] = useState(true);
 
   return (
     <section id="preise" className="py-24 relative">
@@ -113,16 +113,6 @@ export default function Preise() {
           {/* Toggle */}
           <div className="inline-flex items-center gap-4 p-1.5 glass rounded-full">
             <button
-              onClick={() => setIsMonthly(false)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
-                !isMonthly
-                  ? "bg-accent text-background"
-                  : "text-muted hover:text-foreground"
-              }`}
-            >
-              Einmalig
-            </button>
-            <button
               onClick={() => setIsMonthly(true)}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
                 isMonthly
@@ -134,6 +124,16 @@ export default function Preise() {
               <span className="text-xs px-2 py-0.5 bg-accent-secondary/20 text-accent-secondary rounded-full">
                 All-in-One
               </span>
+            </button>
+            <button
+              onClick={() => setIsMonthly(false)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                !isMonthly
+                  ? "bg-accent text-background"
+                  : "text-muted hover:text-foreground"
+              }`}
+            >
+              Einmalig
             </button>
           </div>
         </motion.div>

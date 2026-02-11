@@ -2,7 +2,12 @@ import { Code2, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Impressum | Borota.dev",
+  title: "Impressum",
+  description: "Impressum von Borota.dev - Angaben gemäß § 5 TMG. Erik Borota, professionelle Webentwicklung in Lauingen, Deutschland.",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function Impressum() {
@@ -37,11 +42,13 @@ export default function Impressum() {
               Angaben gemäß § 5 TMG
             </h2>
             <p>
+              Erik Borota
+              <br />
               Borota.dev
               <br />
-              [Straße und Hausnummer]
+              Siedlungsring 51
               <br />
-              [PLZ Ort]
+              89415 Lauingen
               <br />
               Deutschland
             </p>
@@ -52,7 +59,9 @@ export default function Impressum() {
               Kontakt
             </h2>
             <p>
-              E-Mail: kontakt@borota.dev
+              E-Mail: info@borota.dev
+              <br />
+              Telefon: +49 176 98479520
             </p>
           </section>
 
@@ -61,9 +70,11 @@ export default function Impressum() {
               Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
             </h2>
             <p>
-              [Name]
+              Erik Borota
               <br />
-              [Adresse]
+              Siedlungsring 51
+              <br />
+              89415 Lauingen
             </p>
           </section>
 

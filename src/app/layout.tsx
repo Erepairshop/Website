@@ -45,6 +45,14 @@ export const metadata: Metadata = {
     "App Entwicklung",
     "Frontend Entwicklung",
     "Full Stack Entwickler",
+    "Webdesigner Lauingen",
+    "Webentwickler Augsburg",
+    "Webentwickler Bayern",
+    "Homepage erstellen lassen",
+    "Webseite für Unternehmen",
+    "PWA Entwicklung",
+    "KI Integration",
+    "Chatbot Entwicklung",
   ],
   authors: [{ name: siteConfig.author, url: siteConfig.url }],
   creator: siteConfig.author,
@@ -263,6 +271,60 @@ const jsonLd = {
           position: 1,
           name: "Home",
           item: siteConfig.url,
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteConfig.url}/#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Wie läuft ein Projekt ab?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Nach einem kostenlosen Erstgespräch erstelle ich ein individuelles Angebot. Nach Freigabe beginnt die Design-Phase, gefolgt von der Entwicklung. Sie erhalten regelmäßige Updates und können Feedback geben. Nach Abnahme geht Ihre Website live.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Wie lange dauert die Erstellung einer Website?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Eine einfache One-Page Website ist in 1-2 Wochen fertig. Komplexere Projekte mit mehreren Seiten oder Web-Apps dauern 3-6 Wochen. Den genauen Zeitrahmen besprechen wir im Erstgespräch.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Was kostet eine Website?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Die Preise starten ab 499€ für eine One-Page Website. Business-Pakete ab 999€ und Premium-Lösungen ab 1999€. Jedes Projekt ist individuell - kontaktieren Sie mich für ein genaues Angebot.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Bieten Sie auch Wartung und Support an?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja! Ich biete Wartungspakete ab 49€/Monat an. Das beinhaltet regelmäßige Updates, Backups, Sicherheitschecks und technischen Support. So bleibt Ihre Website immer aktuell und sicher.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Kann ich meine Website selbst bearbeiten?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Selbstverständlich! Bei den Business- und Premium-Paketen integriere ich ein benutzerfreundliches CMS (Content Management System), mit dem Sie Texte, Bilder und Inhalte selbst bearbeiten können - ohne Programmierkenntnisse.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Was ist eine Progressive Web App (PWA)?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Eine PWA ist eine Website, die sich wie eine native App verhält. Sie kann auf dem Homescreen installiert werden, funktioniert offline und ist besonders schnell. Perfekt für Unternehmen, die eine App-ähnliche Erfahrung ohne App-Store-Gebühren möchten.",
+          },
         },
       ],
     },
