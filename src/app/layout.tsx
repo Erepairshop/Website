@@ -108,10 +108,9 @@ export const metadata: Metadata = {
     },
   },
 
-  // Verification (add your codes here)
+  // Verification
   verification: {
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
+    google: "mjR9O3XgDid8NgKQOayrCtv9u5NuFpHMi690aILhO24",
   },
 
   // Icons
