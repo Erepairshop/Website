@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-# /out/ - enabled for shared hosting deployment
+/out/
 
 # production
 /build
