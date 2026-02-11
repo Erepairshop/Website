@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /_next/
-
-Sitemap: https://borota.dev/sitemap.xml

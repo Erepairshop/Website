@@ -1,8 +1,0 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Code brackets forming B shape -->
-  <path d="M8 8L4 20L8 32" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 8L36 20L32 32" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Inner dot/cursor -->
-  <circle cx="20" cy="20" r="4" fill="#00ff88"/>
-</svg>
