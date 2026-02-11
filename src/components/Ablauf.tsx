@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     icon: MessageSquare,
     title: "Erstgespräch",
-    subtitle: "Erste Egyeztetés",
+    subtitle: "Erstes Gespräch",
     description:
       "Wir besprechen Ihre Anforderungen, Ziele und Vorstellungen. Gemeinsam definieren wir den Projektumfang.",
   },
@@ -16,7 +16,7 @@ const steps = [
     number: "02",
     icon: Palette,
     title: "Konzept & Design",
-    subtitle: "Tervezés",
+    subtitle: "Planung",
     description:
       "Ich erstelle ein Konzept und Design-Mockups. Sie erhalten einen visuellen Eindruck vom Endprodukt.",
   },
@@ -24,7 +24,7 @@ const steps = [
     number: "03",
     icon: Code,
     title: "Entwicklung",
-    subtitle: "Fejlesztés",
+    subtitle: "Umsetzung",
     description:
       "Die technische Umsetzung erfolgt mit modernen Technologien. Regelmäßige Updates halten Sie informiert.",
   },
@@ -32,7 +32,7 @@ const steps = [
     number: "04",
     icon: Rocket,
     title: "Launch & Support",
-    subtitle: "Indítás",
+    subtitle: "Go-Live",
     description:
       "Nach dem Launch biete ich Support und Wartung an. Ihr Projekt bleibt aktuell und performant.",
   },

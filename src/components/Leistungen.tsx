@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Wrench, Search, Zap, Shield } from "lucide-react";
+import { Globe, Smartphone, Wrench, Search, Zap, Bot, Code, Palette } from "lucide-react";
 
 const services = [
   {
@@ -17,16 +17,16 @@ const services = [
     features: ["React / Next.js", "Progressive Web Apps", "Offline-fähig"],
   },
   {
-    icon: Smartphone,
-    title: "Mobile Apps",
-    description: "Cross-Platform Mobile Apps für iOS und Android mit nativem Look & Feel.",
-    features: ["React Native", "iOS & Android", "Native Performance"],
+    icon: Bot,
+    title: "KI & Automatisierung",
+    description: "Intelligente Lösungen mit künstlicher Intelligenz für mehr Effizienz in Ihrem Business.",
+    features: ["Chatbots & Assistenten", "Prozessautomatisierung", "KI-Integration"],
   },
   {
-    icon: Wrench,
-    title: "Wartung & Support",
-    description: "Kontinuierliche Betreuung und Weiterentwicklung Ihrer digitalen Produkte.",
-    features: ["Updates", "Bug Fixes", "Erweiterungen"],
+    icon: Code,
+    title: "Backend & APIs",
+    description: "Robuste Server-Lösungen und Schnittstellen für Ihre Anwendungen.",
+    features: ["REST APIs", "Datenbanken", "Cloud Services"],
   },
   {
     icon: Search,
@@ -35,10 +35,10 @@ const services = [
     features: ["Core Web Vitals", "Keyword Optimierung", "Analytics"],
   },
   {
-    icon: Shield,
-    title: "Sicherheit",
-    description: "Sichere Implementierung mit Best Practices und regelmäßigen Updates.",
-    features: ["SSL/HTTPS", "Sichere APIs", "Datenschutz"],
+    icon: Wrench,
+    title: "Wartung & Support",
+    description: "Kontinuierliche Betreuung und Weiterentwicklung Ihrer digitalen Produkte.",
+    features: ["Updates & Backups", "Bug Fixes", "Erweiterungen"],
   },
 ];
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send, Github, Linkedin, MessageSquare, CheckCircle } from "lucide-react";
+import { Mail, Send, Phone, MessageCircle, CheckCircle } from "lucide-react";
 
 const projectTypes = [
   "Webseite",
@@ -79,7 +79,7 @@ export default function Kontakt() {
             {/* Contact Methods */}
             <div className="space-y-4 mb-8">
               <a
-                href="mailto:kontakt@borota.dev"
+                href="mailto:info@borota.dev"
                 className="flex items-center gap-4 p-4 glass rounded-lg hover:border-accent/50 transition-all group"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
@@ -87,32 +87,37 @@ export default function Kontakt() {
                 </div>
                 <div>
                   <div className="font-medium">E-Mail</div>
-                  <div className="text-sm text-muted">kontakt@borota.dev</div>
+                  <div className="text-sm text-muted">info@borota.dev</div>
                 </div>
               </a>
-            </div>
 
-            {/* Social Links */}
-            <div>
-              <h4 className="text-sm font-medium mb-4 text-muted">
-                Social Media
-              </h4>
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="w-12 h-12 rounded-lg glass flex items-center justify-center hover:border-accent/50 hover:text-accent transition-all"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 rounded-lg glass flex items-center justify-center hover:border-accent/50 hover:text-accent transition-all"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
+              <a
+                href="tel:+4917698479520"
+                className="flex items-center gap-4 p-4 glass rounded-lg hover:border-accent/50 transition-all group"
+              >
+                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <Phone className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <div className="font-medium">Telefon</div>
+                  <div className="text-sm text-muted">+49 176 98479520</div>
+                </div>
+              </a>
+
+              <a
+                href="https://wa.me/4917698479520"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 glass rounded-lg hover:border-green-500/50 transition-all group"
+              >
+                <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+                  <MessageCircle className="w-5 h-5 text-green-500" />
+                </div>
+                <div>
+                  <div className="font-medium">WhatsApp</div>
+                  <div className="text-sm text-muted">Schnelle Antwort</div>
+                </div>
+              </a>
             </div>
           </motion.div>
 

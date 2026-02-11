@@ -3,14 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Über mich", href: "#ueber-mich" },
   { name: "Leistungen", href: "#leistungen" },
   { name: "Projekte", href: "#projekte" },
-  { name: "Ablauf", href: "#ablauf" },
+  { name: "Preise", href: "#preise" },
   { name: "Kontakt", href: "#kontakt" },
 ];
 
@@ -43,13 +41,9 @@ export default function Navbar() {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
           >
-            <Image
-              src="/logo.svg"
-              alt="Borota.dev"
-              width={160}
-              height={40}
-              className="h-8 w-auto"
-            />
+            <span className="text-2xl font-bold">
+              borota<span className="text-accent">.dev</span>
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}
